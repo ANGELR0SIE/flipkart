@@ -1,0 +1,56 @@
+const flipkart = {
+  header: {
+    headerLogo: {
+      icon: "https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/flipkart-plus_8d85f4.png",
+      p: "Explore",
+      span: "Plus",
+      plus: "https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/plus_aef861.png",
+    },
+    searchBar: {
+      placeholder: "search for products, brands and more ",
+      searchIcon: "search-icon.svg",
+    },
+    login:"Login",
+    seller:"Become a Seller",
+    more:{
+      span:"More",
+      icon:"down-arrow-nav.svg"
+    },
+    cart:{
+      icon:"cart-icon.svg",
+      span:"cart"
+    }
+  },
+};
+
+document.addEventListener("DOMContentLoaded", function () {
+  function createHeader() {
+    const navBar = document.querySelector(".nav-bar");
+    navBar.innerHTML = `
+        <div class="nav-bar-margin">
+          <div class="header-logo">
+            <img src="${flipkart.header.headerLogo.icon}">
+               <a class="link"> <p>${flipkart.header.headerLogo.p} <span> ${flipkart.header.headerLogo.span}</span> <img src=${flipkart.header.headerLogo.plus}></p> </a>
+                 </div>
+            <div class="header-search-bar">
+               <div class="search-bg wht-bg">
+                <input type="text" placeholder="${flipkart.header.searchBar.placeholder}">
+               <div class="seach-img">
+                <img src="${flipkart.header.searchBar.searchIcon}"></div>
+               </div> 
+            </div>
+            <div class="login">
+              <a class="login-link wht-bg clr-bl">${flipkart.header.login}</a>
+            </div>"
+            <div class="seller"><a class="seller-link">${flipkart.header.seller}</a></div>
+             <div class="more">
+             <a class="more-link">${flipkart.header.more.span}</a>
+             <img src="${flipkart.header.more.icon}"/>
+             </div>
+             <div class="cart"><a class=cart-link><img src="${flipkart.header.cart.icon}"><span>${flipkart.header.cart.span}<span></cart>
+       </div>
+        `;
+  }
+
+  createHeader();
+});
