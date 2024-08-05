@@ -1,0 +1,186 @@
+div-margin and padding
+  ----div
+        left
+            top
+                sections
+
+            bottom
+        right
+  ----div
+
+  // Define the sidebar data
+const sidebarData = {
+  sections: [
+    {
+      head: "Filter",
+    },
+    {
+      subHead: [
+        "CATEGORIES",
+        "PRICE",
+        "BRAND",
+        "CUSTOMER RATINGS",
+        "GST INVOICE AVAILABLE",
+        "RAM"
+      ]
+    },
+    // Add more sections as needed
+  ]
+};
+
+// Create sidebar function
+function createSidebar(sidebarData) {
+  const bodySection = document.querySelector('body'); // Adjust as needed
+  const leftSidebar = document.createElement('div');
+  leftSidebar.className = 'left';
+  bodySection.append(leftSidebar);
+
+  const top = document.createElement('div');
+  top.className = 'top-left';
+  leftSidebar.append(top);
+
+  sidebarData.sections.forEach(section => {
+    const sectionElement = document.createElement('section');
+
+    if (section.head) {
+      sectionElement.className = 'filter-hd';
+      sectionElement.innerHTML = `<span>${section.head}</span>`;
+    } else if (section.subHead) {
+      sectionElement.className = 'categories';
+      const subHeadContent = section.subHead.map(
+        item => `<div><span>${item}</span><a href="#">→</a></div>`
+      ).join('');
+      sectionElement.innerHTML = subHeadContent;
+    }
+
+    top.append(sectionElement);
+  });
+}
+
+// Call the function to create the sidebar
+createSidebar(sidebarData);
+
+
+
+
+const filters = {
+    sections: [
+        {
+            title: "CATEGORIES",
+            options: [
+                { text: "Mobiles & Accessories", link: "#" },
+                { text: "Mobiles", link: "#" }
+            ]
+        },
+        {
+            title: "PRICE",
+            options: [
+                { min: 0, max: 10000 },
+                { min: 10000, max: 30000 },
+                { min: 30000, max: "30000+" }
+            ]
+        },
+        {
+            title: "BRAND",
+            options: ["SAMSUNG", "vivo", "OPPO", "realme", "POCO", "MOTOROLA"]
+        }
+        // Add more sections as needed
+    ]
+};
+
+function createFilterSection(section) {
+    const sectionDiv = document.createElement('div');
+    sectionDiv.className = 'filter-section';
+    
+    const title = document.createElement('h3');
+    title.textContent = section.title;
+    sectionDiv.appendChild(title);
+
+    section.options.forEach(option => {
+        const optionElement = createOptionElement(option);
+        sectionDiv.appendChild(optionElement);
+    });
+
+    return sectionDiv;
+}
+
+function createOptionElement(option) {
+    // Logic to create the appropriate HTML element based on option type
+    // Example: if option is an object with min/max, create a price slider
+    // If option is a string, create a checkbox or link
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    const leftSidebar = document.querySelector('.left');
+    filters.sections.forEach(section => {
+        const sectionElement = createFilterSection(section);
+        leftSidebar.appendChild(sectionElement);
+    });
+});
+
+
+
+
+
+
+
+const iPhones = [
+  {
+    name: "Apple iPhone 15",
+    color: "Pink",
+    storage: "256 GB",
+    price: 81999,
+    originalPrice: 89900,
+    discount: "8% off",
+    delivery: "Free delivery",
+    specialOffers: ["Save extra with combo offers"],
+    stock: "Only 4 left",
+    specs: {
+      display: "15.49 cm (6.1 inch) Super Retina XDR Display",
+      cameras: "48MP + 12MP | 12MP Front Camera",
+      processor: "A16 Bionic Chip, 6 Core Processor",
+    },
+    warranty: "1 Year Warranty for Phone and 6 Months Warranty for In-Box Accessories",
+    ratings: 4.6,
+    reviews: 2408,
+  },
+  {
+    name: "Apple iPhone 15",
+    color: "Blue",
+    storage: "128 GB",
+    price: 71999,
+    originalPrice: 79000,
+    discount: "9% off",
+    delivery: "Free delivery",
+    specialOffers: ["Save extra with combo offers"],
+    stock: "Only 1 left",
+    specs: {
+      display: "15.49 cm (6.1 inch) Super Retina XDR Display",
+      cameras: "48MP + 12MP | 12MP Front Camera",
+      processor: "A16 Bionic Chip, 6 Core Processor",
+    },
+    warranty: "1 Year Warranty for Phone and 6 Months Warranty for In-Box Accessories",
+    ratings: 4.6,
+    reviews: 2408,
+  },
+  {
+    name: "Apple iPhone 15",
+    color: "Black",
+    storage: "128 GB",
+    price: 71999,
+    originalPrice: 79000,
+    discount: "9% off",
+    delivery: "Free delivery",
+    specialOffers: ["Upto ₹53,150 Off on Exchange"],
+    stock: "Available",
+    specs: {
+      display: "15.49 cm (6.1 inch) Super Retina XDR Display",
+      cameras: "48MP + 12MP | 12MP Front Camera",
+      processor: "A16 Bionic Chip, 6 Core Processor",
+    },
+    warranty: "1 Year Warranty for Phone and 6 Months Warranty for In-Box Accessories",
+    ratings: 4.6,
+    reviews: 2408,
+    isChoice: true,
+  },
+];
