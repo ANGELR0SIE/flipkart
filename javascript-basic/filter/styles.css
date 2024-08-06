@@ -1,0 +1,18 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+.item {
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+.links {
+    margin-bottom: 20px;
+}
+.link {
+    margin-right: 10px;
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+}

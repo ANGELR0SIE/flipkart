@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Dynamic Webpage with Filters and Sorting</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .item {
+            margin: 5px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+        .links {
+            margin-bottom: 20px;
+        }
+        .link {
+            margin-right: 10px;
+            cursor: pointer;
+            color: blue;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Filter and Sort Items</h1>
+    <div class="links">
+        <span class="link" data-sort="name">Sort by Name</span>
+        <span class="link" data-sort="category">Sort by Category</span>
+    </div>
+    <div id="items"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const items = [
+                { name: 'Item 1', category: 'category1' },
+                { name: 'Item 2', category: 'category2' },
+                { name: 'Item 3', category: 'category1' },
+                { name: 'Item 4', category: 'category2' },
+            ];
+
+            const filters = document.querySelectorAll('#filters input[type="checkbox"]');
+            const itemsContainer = document.getElementById('items');
+            const sortLinks = document.querySelectorAll('.link');
+
+            function displayItems(filteredItems) {
+                itemsContainer.innerHTML = filteredItems.map(item => 
+                    `<div class="item">${item.name} (${item.category})</div>`
+                ).join('');
+            }
+
+            function sortItems(sortBy) {
+                const selectedCategories = Array.from(filters)
+                    .filter(filter => filter.checked)
+                    .map(filter => filter.value);
+
+                const filteredItems = items.filter(item => 
+                    selectedCategories.length === 0 || selectedCategories.includes(item.category)
+                );
+
+                filteredItems.sort((a, b) => b[sortBy].localeCompare(a[sortBy]));
+                
+                displayItems(filteredItems);
+            }
+
+            // filters.forEach(filter => {
+            //     filter.addEventListener('change', filterItems);
+            // });
+
+            sortLinks.forEach(link => {
+                link.addEventListener('click', () => sortItems(link.dataset.sort));
+            });
+
+            // Display all items initially
+            displayItems(items);
+        });
+    </script>
+</body>
+</html>

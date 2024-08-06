@@ -1,0 +1,21 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+#filters {
+    margin-bottom: 20px;
+}
+
+#items {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 5px;
+    width: 200px;
+    text-align: center;
+}

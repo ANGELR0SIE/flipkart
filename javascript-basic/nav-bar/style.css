@@ -11,31 +11,39 @@ input {
   border: none;
   outline: none;
 }
-
+li {
+  list-style-type: none;
+}
 body,
 html {
   margin: 0;
   padding: 0;
   text-wrap: nowrap;
-  line-height: 1.4px;
+  /* line-height: 1.4px; */
   height: 1000px;
   background-color: #f1f3f6;
+  font-family: Inter Regular;
+}
+span,
+p,
+h2 {
+  line-height: normal;
 }
 @font-face {
-  font-family: font1;
-  src: url(https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/fonts/Inter-Regular.woff2);
+  font-family: inter-italics;
+  src: url(fonts/Inter-Italic.woff2);
 }
 @font-face {
-  font-family: font2;
-  src: url(https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/fonts/Inter-Italic.woff2);
+  font-family: inter-semi-bold-italic;
+  src: url(fonts/Inter-SemiBoldItalic.woff2);
 }
 @font-face {
-  font-family: font3;
-  src: url(https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/fonts/Inter-SemiBoldItalic.woff2);
+  font-family: Inter Regular;
+  src: url(fonts/Inter-Regular.woff2);
 }
 @font-face {
-  font-family: font4;
-  src: url(https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/fonts/Inter-SemiBold.woff2);
+  font-family: inter-semi-bold;
+  src: url(fonts/Inter-SemiBold.woff2);
 }
 .wht-bg {
   background-color: #fff;
@@ -81,7 +89,7 @@ html {
   font-size: 11px;
   /* font-style: italic; */
   margin-top: -1px;
-  font-family: font2;
+  font-family: inter-italics;
 }
 
 .header-logo .link span {
@@ -162,7 +170,7 @@ html {
   font-size: 16px;
   letter-spacing: -0.1px;
   display: flex;
-  font-family: font4;
+  font-family: inter-semi-bold;
   align-items: center;
   width: 100%;
 }
@@ -377,47 +385,58 @@ html {
 .path span {
   font-size: 12px;
   color: #878787;
-  height: 100%;
-  position: relative;
-  display: inline-block;
-  /* top: 12px; */
-  line-height: normal;
+  font-family: DejaVu Sans;
 }
 
 .results {
-  font-size: 16px;
+  /* font-size: 16px; */
   margin-top: 8px;
-  height: fit-content;
-  height: 22.39px;
-  display: inline-block;
 }
 .results span {
-  position: relative;
-  top: 12px;
-  font-family: font4;
+  font-family: inter-semi-bold,nimbus;
+  font-weight: 500;
+  font-size: 15.3px;
+  /* line-height: 18px; */
+  line-height: 22.4px;
 }
 
 .filter-bar {
   display: flex;
-  /* height: 33.59px; */
   align-items: center;
 }
 
-.filter-txt {
+.filter-txt{
+  cursor: pointer;
+  padding: 8px 0 4px;
+}
+
+.filter-txt span {
   padding: 8px 0 4px;
   border-bottom: 2px solid transparent;
   line-height: normal;
-  font-family: font4;
+  font-family: inter-semi-bold;
+  /* margin: 0 10px; */
+  margin: 0px 11px;
+  font-size: 14px;
+  line-height: 19.6px;
+  font-weight: 500;
+  font-size: 13px;
+  font-family: Inter Regular;
+  /* font-style:semi-bold; */
 }
 
-.filter-bar :first-child {
+.filter-bar :first-child span {
   padding: 8px 10px 4px 0;
+  margin: 0;
+  font-family: inter-semi-bold;
 }
 
-.filter-bar:nth-child(2) {
+.filter-bar :nth-child(2) span{
   color: #2874f0;
   cursor: default;
+  padding-bottom: 7px;
   border-bottom: 2px solid #2874f0;
+  font-family: inter-semi-bold;
 }
 .right-Section {
   width: 100%;
@@ -426,7 +445,13 @@ html {
   line-height: 1;
   padding: 24px 0 30px 24px;
   position: relative;
+  height: 286.38px;
   border-bottom: 1px solid #f0f0f0;
+}
+.img-rel {
+  width: 200px;
+  position: relative;
+  height: 100%;
 }
 
 .image-div {
@@ -450,41 +475,58 @@ html {
   position: absolute;
   display: inline-block;
   top: 2px;
-  right: -8px;
+  left: 8px;
+  /* right: -8px; */
+  height: 100%;
+  width: 100%;
+}
+
+.heart img {
+  height: 16px;
+  width: 16px;
+  margin: 0;
+  margin-left: auto;
 }
 
 .compare {
-  margin-top: 16px;
   /* display: inline-block; */
-  position: relative;
+  /* position: relative; */
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   position: absolute;
-  bottom: -24px;
+  bottom: -35px;
+  margin-top: 16px;
+  box-sizing: content;
+  height: 100%;
 }
+
+/* .compare ::before{
+  content: "";
+
+} */
+
 .compare input {
   /* visibility: hidden; */
-  position: absolute;
+  /* position: absolute;
   top: 0;
-  left: 0;
+  left: 0; */
 }
 .compare div {
   position: relative;
   width: 14px;
   height: 14px;
+  margin-top: 8px;
   background-color: transparent;
   border: 1.4px solid var(--color-grey-grade3);
   border-radius: 1.5px;
-  display: inline-block;
-  
+  /* display: inline-block; */
 }
 
-.compare span{
+.compare span {
   margin-left: 8px;
   font-size: 14px;
   line-height: normal;
   color: #212121;
-
 }
 
 .row {
@@ -495,13 +537,14 @@ html {
 }
 
 .row-left {
-  width: 58.33%;
+  /* width: 58.33%; */
+  width: 62%;
   display: inline-block;
   font-family: font4;
 }
 
 .row-left h2 {
-  font-family: font4;
+  font-family: inter-semi-bold;
   font-size: 18px;
   line-height: 18px;
 }
@@ -543,18 +586,22 @@ html {
 
 .features li {
   font-size: 14px;
-  font-family: font4;
+  font-family: Inter Regular;
 }
 .row-right {
   padding-left: 25px;
   width: 41.66%;
-  display: inline-block;
-  align-items: end;
 }
 .price-details {
   display: inline-block;
   margin-top: -1px;
   padding-right: 10px;
+}
+.price {
+  display: flex;
+  flex-direction: column;
+
+  flex-wrap: wrap;
 }
 .curr-price {
   font-size: 25px;
@@ -565,7 +612,9 @@ html {
   padding-top: 10px;
   margin-left: 0;
   font-size: 14px;
+  display: inline-block;
   color: #878787;
+  text-decoration-line: line-through;
 }
 .discount {
   color: #388e3c;
@@ -579,3 +628,84 @@ html {
   font-size: 12px;
   line-height: 16px;
 }
+.f-logo {
+  display: inline-block;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 0;
+  padding-bottom: 4px;
+}
+
+.f-logo img {
+  width: 77px;
+  height: 21px;
+}
+
+.section {
+  padding: 16px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.left-sec-title{
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.left-sec-title span{
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: .3px;
+  width: 95%;
+}
+
+.left-sec-body{
+
+}
+
+.left-sec-searchbar{
+  margin:7px 0;
+}
+.left-sec-searchbar img{
+  width: 12px;
+  height: 20px;
+  position: apsolute;
+}
+
+.left-sec-searchbar input{
+  width: 100%;
+  border-bottom: 2px #e0e0e0;
+  height: 20px;
+  font-size: 14px;
+  padding: 0 0 0 21px;
+  color: #878787;
+}
+.left-sec-searchbar input ::placeholder{
+  color: #212121;
+}
+.left-sec-body ul {
+  margin-bottom: 7px;
+}
+.left-sec-body ul li{
+  padding: 6px 0;
+  width: 100%;
+  display: flex;
+  cursor: pointer;
+
+}
+.left-sec-body ul li input{
+  height: 14px;
+  width:14px;
+  border: 1.4px solid #c2c2c2;
+  border-radius: 1.5px;
+
+}
+.left-sec-body ul li  span{
+  font-size: 14px;
+  padding-left: 11px;
+  color: #212121;
+  width: calc(100% - 25);
+  line-height: 1px;
+
+}
+
