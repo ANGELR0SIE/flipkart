@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pascal's Triangle with Circles</title>
+    <style>
+        #container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .row {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+        .circle {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: lightgray;
+            margin: 5px;
+        }
+        .active {
+            background-color: rgb(129, 65, 189);
+        }
+    </style>
+</head>
+<body>
+    <div id="controls">
+        <label for="rows">Number of Rows:</label>
+        <input type="number" id="rows" min="1" value="5">
+        <label for="delay">Delay (ms):</label>
+        <input type="range" id="delay" min="100" max="2000" step="100" value="500">
+        <span id="delayValue">500 ms</span>
+        <button id="start">Start</button>
+        <button id="stop">Stop</button>
+    </div>
+    <div id="container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

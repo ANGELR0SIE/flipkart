@@ -1,0 +1,51 @@
+<html>
+  <head> </head>
+  <style>
+    .button {
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      border: 1px solid #bababa;
+      position: absolute;
+      background-color: #fff;
+      top: 3.5px;
+      transition: translate 0.5s ease-out;
+    }
+    .blue {
+      background-color: #2874f0;
+      transform-origin: left center;
+      top: 4px;
+      height: 6px;
+      display: inline-block;
+      position: absolute;
+    }
+    .hash {
+      background-color: #c2c2c2;
+      height: 2px;
+      display: inline-block;
+      position: absolute;
+      top: 6px;
+      width: 100%;
+    }
+    .div{
+        position: relative;
+    height: 13px;
+    cursor: pointer;
+    }
+    input{
+        top: 0;
+        left: 0;
+    }
+  </style>
+  <body>
+    <div>
+        <input type="range" id="volume" name="volume" min="0" max="11" />
+        <label for="volume">Volume</label>
+      </div>
+      
+      <div>
+        <input type="range" id="cowbell" name="cowbell" min="0" max="100" value="90" step="10" />
+        <label for="cowbell">Cowbell</label>
+      </div>
+  </body>
+</html>

@@ -308,38 +308,7 @@ document.addEventListener("DOMContentLoaded", function () {
             sectionBodyul.append(sectionbdli);
           });
           sectionBody.append(sectionBodyul);
-
-
-
-
-
-
-
-
-
-
-
-
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         createTicklist();
         const more = document.createElement("div");
@@ -585,13 +554,12 @@ document.addEventListener("DOMContentLoaded", function () {
       updateClearAllVisibility();
       updateFilterList();
     }
-    const checkbox=document.querySelector(".sec2-input");
+    const checkbox = document.querySelector(".sec2-input");
     checkbox.addEventListener("change", function () {
       checkboxStates[item] = checkbox.checked;
       updateClearAllVisibility();
       updateFilterList();
     });
-    
 
     function updateClearAllVisibility() {
       const clearAll = document.querySelector(".remove-items");
