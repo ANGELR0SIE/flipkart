@@ -1,0 +1,127 @@
+/* body {
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.keyboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.key {
+    background-color: #f2f2f2;
+    border-radius: 3px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    user-select: none;
+}
+
+.key.wide {
+    width: 100px;
+}
+
+.key.long {
+    width: 200px;
+} */
+
+
+
+
+/* Created by Tivotal */
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(214, 214, 214);
+}
+
+.wrapper .row {
+  width: 100%;
+  height: 60px;
+  margin: 10px 0 0 0;
+}
+
+.wrapper .row button {
+  width: 55px;
+  height: 55px;
+  background: rgb(214, 214, 214);
+  outline: none;
+  border: none;
+  box-shadow: 5px 5px 10px #474343, -5px -5px 10px #fff;
+  border-radius: 20%;
+  font-size: 18px;
+  color: #000;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.wrapper .row button:active {
+  box-shadow: 1px 1px 2px #fff8f8, -1px -1px 2px #474343;
+}
+
+.row button.backspace {
+  width: 115px;
+  border-radius: 10px;
+}
+
+.row button.tab {
+  width: 85px;
+  border-radius: 10px;
+}
+
+.row button.slash {
+  width: 85px;
+  border-radius: 10px;
+}
+
+.row button.caps {
+  width: 100px;
+  border-radius: 10px;
+}
+
+.row button.enter {
+  width: 135px;
+  border-radius: 10px;
+}
+
+.row button.shift {
+  width: 150px;
+  border-radius: 10px;
+}
+
+.wrapper .row:nth-child(5) button {
+  width: 70px;
+  border-radius: 10px;
+}
+
+.wrapper .row button.space {
+  width: 398px;
+  border-radius: 10px;
+}

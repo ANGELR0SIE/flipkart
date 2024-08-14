@@ -313,8 +313,10 @@
   }
   .filter-hd span {
     font-size: 18px;
-    font-family: font4;
-    letter-spacing: 0.3px;
+    font-family:inter-semi-bold;
+    letter-spacing: -.2px;
+    line-height: 25.2px;
+    font-weight: 0;
   }
   .filter-list-hidden {
     display: flex;
@@ -345,8 +347,10 @@
   .categories :first-child {
     font-size: 12px;
     color: #212121;
+    line-height: 16.8px;
     margin-bottom: 5px;
     padding: 0;
+    font-family: inter-semi-bold;
   }
   .categories img {
     margin-right: 5px;
@@ -358,12 +362,20 @@
     font-family: font1;
     font-size: 14px;
     white-space: nowrap;
+    line-height: 19.6px;
+    font-family: inter-semi-bold;
   }
+  /* .categories .grey a ::before{
+    content:' url("assets/side-arrow.svg")';
+    height: 10px;
+    width: 10px;
+  } */
   .categories .bold a {
     width: 150px;
     white-space: nowrap;
-    font-family: font4;
+    font-family: inter-semi-bold;
     font-size: 14px;
+    line-height: 19.6px;
   }
   
   /* :rightsections */
@@ -377,7 +389,9 @@
   .rightHead {
     display: flex;
     width: 100%;
-    align-items: flex-end;
+    flex-direction: column;
+    background-color: #ffff;
+    border-bottom: 1px solid #f0f0f0;
   }
   
   /* .emptyhead-div{
@@ -744,3 +758,13 @@ color: blue;
     display: inline-block;
 
   }
+  .left-sec-more{
+    color: #2874f0;
+    font-size: 12px;
+    line-height: 16.8px;
+    font-family: inter-semi-bold;
+    }
+
+
+
+

@@ -61,8 +61,8 @@ document.addEventListener("DOMContentLoaded", function () {
     left: {
       topDiv: [
         {
-          head: "Filters",
-          catHead: "CATEGORIES",
+          head: "Filter",
+          catHead: "categories",
           greytxt: "Mobiles & Accessories",
           blacktxt: "Mobiles",
           image: "assets/down-arrow-nav.svg",
@@ -89,28 +89,6 @@ document.addEventListener("DOMContentLoaded", function () {
           title: "CUSTOMER RATINGS",
           options: ["4★ & above", "3★ & above"],
           id: ["4", "3"],
-        },
-      ],
-      section5: [
-        {
-          title: "GST INVOICE AVAILABLE",
-          options: ["GST Invoice Available"],
-        },
-      ],
-      section6: [
-        {
-          title: "RAM",
-
-          options: [
-            "4 GB",
-            "3 GB",
-            "2 GB",
-            "1GB and Below",
-            "8 GB and Above",
-            "6 GB",
-            "6 GB Above",
-          ],
-          id: ["4", "3", "1+", "8+", "6", "6+"],
         },
       ],
     },
@@ -154,7 +132,6 @@ document.addEventListener("DOMContentLoaded", function () {
           name: "Apple iPhone 15",
           color: "Pink",
           storage: "256 GB",
-          RAM: "",
           price: "81,999",
           originalPrice: "89900",
           discount: "8% off",
@@ -186,7 +163,6 @@ document.addEventListener("DOMContentLoaded", function () {
           ratingStar: "",
           reviews: 550,
           Ratings: 9783,
-          RAM: "8",
           ram: "| 4 GB RAM",
           expandable: "| Expandable Upto 1 TB",
           display: "16.76 cm (6.6 inch) HD+ Display",
@@ -212,7 +188,6 @@ document.addEventListener("DOMContentLoaded", function () {
           name: "POCO M6 5G",
           color: "Galactic Black",
           rom: "128 GB",
-          RAM: "6",
           storage: "128 GB",
           ratings: 4.3,
           ratingStar: "",
@@ -529,6 +504,54 @@ document.addEventListener("DOMContentLoaded", function () {
 
       leftSidebar.appendChild(section);
     });
+    // flipkart.left.section4.forEach((item) => {
+    //   const section = document.createElement("section");
+    //   section.className = "section sec4";
+
+    //   const title = document.createElement("div");
+    //   title.className = "left-sec-title";
+    //   title.innerHTML = `<span>${item.title}</span>`;
+    //   section.appendChild(title);
+
+    //   const leftSecBody = document.createElement("div");
+    //   leftSecBody.className = "left-sec-body";
+
+    //   const removeItems = document.createElement("div");
+    //   removeItems.className = " remove-items sec4-remove-items";
+    //   removeItems.style.display = "none";
+    //   const removeIcon = document.createElement("span");
+    //   removeIcon.className = "icon";
+    //   removeIcon.innerHTML = "✕";
+    //   const removeText = document.createElement("span");
+    //   removeText.className = "text";
+    //   removeText.innerHTML = "Clear all";
+    //   removeItems.appendChild(removeIcon);
+    //   removeItems.appendChild(removeText);
+
+    //   const checkboxUl = document.createElement("ul");
+    //   checkboxUl.className = "checkbox-ul";
+    //   item.options.forEach((option) => {
+    //     const li = document.createElement("li");
+    //     li.className = "checkbox-li";
+    //     const input = document.createElement("input");
+    //     input.className = "sec4-input";
+    //     input.type = "checkbox";
+    //     input.value = option;
+    //     const span = document.createElement("span");
+    //     span.innerHTML = option;
+    //     span.className = "rating";
+    //     li.appendChild(input);
+    //     li.appendChild(span);
+    //     checkboxUl.appendChild(li);
+    //   });
+
+    //   leftSecBody.appendChild(removeItems);
+    //   leftSecBody.appendChild(checkboxUl);
+
+    //   section.appendChild(leftSecBody);
+    //   leftSidebar.appendChild(section);
+    // });
+
     flipkart.left.section4.forEach((item) => {
       const section = document.createElement("section");
       section.className = "section sec4";
@@ -581,108 +604,14 @@ document.addEventListener("DOMContentLoaded", function () {
       leftSidebar.appendChild(section);
     });
 
-    flipkart.left.section5.forEach((item) => {
-      const section = document.createElement("section");
-      section.className = "section sec5";
-      const title = document.createElement("div");
-      title.className = "left-sec-title";
-      const titleSpan = document.createElement("span");
-      titleSpan.innerHTML = item.title;
-      title.appendChild(titleSpan);
-      section.appendChild(title);
-      const leftSecBody = document.createElement("div");
-      leftSecBody.className = "left-sec-body";
-      const removeItems = document.createElement("div");
-      removeItems.className = "remove-items sec5-remove-items";
-      removeItems.style.display = "none";
-      const removeIcon = document.createElement("span");
-      removeIcon.className = "icon";
-      removeIcon.innerHTML = "✕";
-      const removeText = document.createElement("span");
-      removeText.className = "text";
-      removeText.innerHTML = "Clear all";
-      removeItems.appendChild(removeIcon);
-      removeItems.appendChild(removeText);
-      const checkboxUl = document.createElement("ul");
-      checkboxUl.className = "checkbox-ul";
-      item.options.forEach((option, index) => {
-        const li = document.createElement("li");
-        li.className = "checkbox-li";
-        const input = document.createElement("input");
-        input.className = "sec5-input";
-        input.type = "checkbox";
-        input.value = option;
-
-        const span = document.createElement("span");
-        span.innerHTML = option;
-        span.className = "rating";
-        li.appendChild(input);
-        li.appendChild(span);
-        checkboxUl.appendChild(li);
-      });
-      leftSecBody.appendChild(removeItems);
-      leftSecBody.appendChild(checkboxUl);
-
-      section.appendChild(leftSecBody);
-      leftSidebar.appendChild(section);
-    });
-    flipkart.left.section6.forEach((item) => {
-      const section = document.createElement("section");
-      section.className = "section sec6";
-
-      const title = document.createElement("div");
-      title.className = "left-sec-title";
-
-      const titleSpan = document.createElement("span");
-      titleSpan.innerHTML = item.title;
-      title.appendChild(titleSpan);
-      section.appendChild(title);
-
-      const leftSecBody = document.createElement("div");
-      leftSecBody.className = "left-sec-body";
-
-      const removeItems = document.createElement("div");
-      removeItems.className = "remove-items sec6-remove-items";
-      removeItems.style.display = "none";
-
-      const removeIcon = document.createElement("span");
-      removeIcon.className = "icon";
-      removeIcon.innerHTML = "✕";
-
-      const removeText = document.createElement("span");
-      removeText.className = "text";
-      removeText.innerHTML = "Clear all";
-      removeItems.appendChild(removeIcon);
-      removeItems.appendChild(removeText);
-
-      const checkboxUl = document.createElement("ul");
-      checkboxUl.className = "checkbox-ul";
-
-      item.options.forEach((option, index) => {
-        const li = document.createElement("li");
-        li.className = "checkbox-li";
-
-        const input = document.createElement("input");
-        input.className = "sec6-input";
-        input.type = "checkbox";
-        input.value = option;
-        input.id = item.id[index]; // Set the ID for each checkbox
-
-        const span = document.createElement("span");
-        span.innerHTML = option;
-        span.className = "rating";
-
-        li.appendChild(input);
-        li.appendChild(span);
-        checkboxUl.appendChild(li);
-      });
-
-      leftSecBody.appendChild(removeItems);
-      leftSecBody.appendChild(checkboxUl);
-
-      section.appendChild(leftSecBody);
-      leftSidebar.appendChild(section);
-    });
+    // flipkart.left.section5.forEach((item)=>{
+    //   const section=document.createElement("section");
+    //   const leftSecTitle=document.createElement("div");
+    //   leftSecTitle.className = "left-sec-title";
+    //   const leftSecTitleSpan = document.createElement("span");
+    //   leftSecTitleSpan.innerHTML = item.title;
+    //   leftSecTitle.appendChild(leftSecTitleSpan);
+    // })
   }
 
   function createRightMainbar() {
@@ -744,6 +673,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const rightSection = document.createElement("section");
       rightSection.className = "right-Section";
+
+      // Image and Compare section
       const imgRel = document.createElement("div");
       imgRel.className = "img-rel";
 
@@ -771,7 +702,7 @@ document.addEventListener("DOMContentLoaded", function () {
       heartDiv.className = "heart";
 
       const heartImg = document.createElement("img");
-      heartImg.src = "assets/grey-heart.svg";
+      heartImg.src = "assets/grey-heart.svg"; // Update if necessary
 
       heartDiv.appendChild(heartImg);
       const date = document.createElement("div");
@@ -898,7 +829,159 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  // function setupEventListeners() {
+  //   document
+  //     .querySelector(".search-input")
+  //     .addEventListener("input", filterProducts);
+  //   document
+  //     .querySelectorAll(".lowtoHigh")
+  //     .forEach((btn) =>
+  //       btn.addEventListener("click", () => sortProducts("low-high"))
+  //     );
+  //   //   document.querySelectorAll(".sort-high-low").forEach(btn => btn.addEventListener("click", () => sortProducts('high-low')));
+  //   //   document.querySelectorAll(".lowtoHigh").forEach(btn => btn.addEventListener("click", () => sortProducts('low-high')));
+  //   document
+  //     .querySelectorAll(".hightoLow")
+  //     .forEach((btn) =>
+  //       btn.addEventListener("click", () => sortProducts("high-low"))
+  //     );
+
+  //   //   document.querySelectorAll(".sec2-input").forEach(checkbox => checkbox.addEventListener("change", toggleClearAllVisibility));
+  //   document
+  //     .querySelector(".remove-items-sec2")
+  //     .addEventListener("click", clearAllFilters);
+  //   document
+  //     .querySelector(".sec2-search-input")
+  //     .addEventListener("input", filterItems);
+  //   document
+  //     .querySelectorAll(".sec2-input")
+  //     .forEach((checkbox) =>
+  //       checkbox.addEventListener("change", filterByBrand)
+  //     );
+  //   document
+  //     .querySelectorAll(".lowtoHigh")
+  //     .forEach((btn) =>
+  //       btn.addEventListener("click", () => sortProducts("low-high"))
+  //     );
+  //   document
+  //     .querySelectorAll(".highToLow")
+  //     .forEach((btn) =>
+  //       btn.addEventListener("click", () => sortProducts("high-low"))
+  //     );
+  //   document
+  //     .querySelectorAll(".newestFirst")
+  //     .forEach((btn) =>
+  //       btn.addEventListener("click", () => sortProducts("newestFirst"))
+  //     );
+  //   document
+  //     .querySelectorAll(".oldestFirst")
+  //     .forEach((btn) =>
+  //       btn.addEventListener("click", () => sortProducts("oldestFirst"))
+  //     );
+  //   document
+  //     .querySelectorAll(".popularity")
+  //     .forEach((btn) =>
+  //       btn.addEventListener("click", () => sortProducts("popularity"))
+  //     );
+  // }
+  // function filterProducts() {
+  //   const searchInput = document
+  //     .querySelector(".search-input")
+  //     .value.toLowerCase();
+  //   const productSections = document.querySelectorAll(".right-Section");
+  //   productSections.forEach((section) => {
+  //     const productName = section
+  //       .querySelector(".row-left h2")
+  //       .innerHTML.toLowerCase();
+  //     section.style.display = productName.includes(searchInput)
+  //       ? "flex"
+  //       : "none";
+  //   });
+  // }
+
+  // function sortProducts(order) {
+  //   const products = [...document.querySelectorAll(".right-sec-div")];
+  //   const container = document.querySelector(".right-sec");
+
+  //   if (order === "low-high" || order === "high-low") {
+  //     products.sort((a, b) => {
+  //       const priceA = parseFloat(
+  //         a.querySelector(".curr-price").textContent.replace(/[^0-9.-]+/g, "")
+  //       );
+  //       const priceB = parseFloat(
+  //         b.querySelector(".curr-price").textContent.replace(/[^0-9.-]+/g, "")
+  //       );
+  //       return order === "low-high" ? priceA - priceB : priceB - priceA;
+  //     });
+  //   }
+  //   //  else if (order === 'newestFirst' || order === 'oldestFirst') {
+  //   //     products.sort((a, b) => {
+  //   //         const dateA = new Date(a.querySelector(".product-date").getAttribute('data-date'));
+  //   //         const dateB = new Date(b.querySelector(".product-date").getAttribute('data-date'));
+  //   //         return order === 'newestFirst' ? dateB - dateA : dateA - dateB;
+  //   //     });
+  //   // } else if (order === 'popularity') {
+  //   //     products.sort((a, b) => {
+  //   //         const ratingA = parseFloat(a.querySelector(".rating").textContent);
+  //   //         const ratingB = parseFloat(b.querySelector(".rating").textContent);
+  //   //         return ratingB - ratingA;
+  //   //     });
+  //   // }
+  //   container.innerHTML = "";
+  //   products.forEach((product) => container.appendChild(product));
+  // }
+
+  // function filterItems() {
+  //   const filterInput = document
+  //     .querySelector(".sec2-search-input")
+  //     .value.toLowerCase();
+  //   document.querySelectorAll(".checkbox-li").forEach((item) => {
+  //     const itemName = item.querySelector("span").innerHTML.toLowerCase();
+  //     item.style.display = itemName.includes(filterInput) ? "block" : "none";
+  //   });
+  // }
+
+  // function toggleClearAllVisibility() {
+  //   const checkboxes = document.querySelectorAll(".sec2-input:checked");
+  //   document.querySelector(".remove-items-sec2").style.display =
+  //     checkboxes.length > 0 ? "block" : "none";
+  // }
+
+  // function clearAllFilters() {
+  //   document
+  //     .querySelectorAll(".sec2-input:checked")
+  //     .forEach((checkbox) => (checkbox.checked = false));
+  //   toggleClearAllVisibility();
+  //   filterByBrand();
+  // }
+
+  // function filterByBrand() {
+  //   const selectedBrands = Array.from(
+  //     document.querySelectorAll(".sec2-input:checked")
+  //   ).map((cb) => cb.value.toLowerCase());
+  //   const products = document.querySelectorAll(".right-sec-div");
+  //   console.log("Selected Brands:", selectedBrands);
+  //   console.log("Total Products:", products.length);
+  //   const anyBrandSelected = selectedBrands.length > 0;
+  //   console.log("Any Brand Selected:", anyBrandSelected);
+  //   products.forEach((product) => {
+  //     const productBrand = product
+  //       .querySelector(".brand")
+  //       .textContent.toLowerCase();
+  //     console.log("Product Brand:", productBrand);
+  //     const matchesBrand =
+  //       !anyBrandSelected ||
+  //       selectedBrands.some((brand) => productBrand.includes(brand));
+  //     console.log("Matches Brand:", matchesBrand);
+  //     product.style.display = matchesBrand ? "flex" : "none";
+  //   });
+  //   toggleClearAllVisibility();
+  // }
+
+  //   for section4------------
+
   function setupEventListeners() {
+    // Existing event listeners
     document
       .querySelector(".search-input")
       .addEventListener("input", filterProducts);
@@ -936,24 +1019,16 @@ document.addEventListener("DOMContentLoaded", function () {
       .querySelector(".sec2-search-input")
       .addEventListener("input", filterItems);
     document.querySelectorAll(".sec2-input").forEach(
-      (checkbox) => checkbox.addEventListener("change", leftfilterProducts) 
+      (checkbox) => checkbox.addEventListener("change", leftfilterProducts) // Combined filter function
     );
 
     // Section 4 event listeners
     document.querySelectorAll(".sec4-input").forEach(
-      (checkbox) => checkbox.addEventListener("change", leftfilterProducts) 
+      (checkbox) => checkbox.addEventListener("change", leftfilterProducts) // Combined filter function
     );
     document
       .querySelector(".sec4-remove-items")
       .addEventListener("click", clearAllRatings);
-
-    // Section 6 event listeners
-    document
-      .querySelectorAll(".sec6-input")
-      .forEach((checkbox) => checkbox.addEventListener("change", filterByRAM));
-    document
-      .querySelector(".sec6-remove-items")
-      .addEventListener("click", clearAllRAMFilters);
   }
 
   function filterProducts() {
@@ -1047,23 +1122,23 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector(".remove-items-sec2").style.display =
       checkboxes.length > 0 ? "block" : "none";
   }
-
+  
   function clearAllFilters() {
     document.querySelectorAll(".sec2-input:checked").forEach((checkbox) => {
       checkbox.checked = false;
     });
     toggleClearAllVisibility();
-    leftfilterProducts();
+    filterByBrand();
   }
-
+  
   function clearAllRatings() {
     document.querySelectorAll(".sec4-input:checked").forEach((checkbox) => {
       checkbox.checked = false;
     });
     toggleClearAllRatingsVisibility();
-    leftfilterProducts();
+    filterByRating();
   }
-
+  
   function toggleClearAllRatingsVisibility() {
     const removeItemsSec4 = document.querySelector(".sec4-remove-items");
     if (removeItemsSec4) {
@@ -1073,63 +1148,9 @@ document.addEventListener("DOMContentLoaded", function () {
       console.error("Element '.sec4-remove-items' not found.");
     }
   }
-
-  function filterByRAM() {
-    const selectedRAMIds = Array.from(
-      document.querySelectorAll(".sec6-input:checked")
-    ).map((checkbox) => checkbox.id);
-
-    const products = document.querySelectorAll(".right-sec-div");
-
-    products.forEach((productElement, index) => {
-      const product = flipkart.right.rightSections[index];
-      const productRAM = product.RAM ? parseInt(product.RAM, 10) : 0;
-      const matchesRAM =
-        selectedRAMIds.length === 0 ||
-        selectedRAMIds.some((id) => {
-          if (id === "8+") {
-            return productRAM >= 8;
-          }
-          if (id === "6+") {
-            return productRAM >= 6;
-          }
-          if (id === "6") {
-            return productRAM === 6;
-          }
-          if (id === "4") {
-            return productRAM === 4;
-          }
-          if (id === "3") {
-            return productRAM === 3;
-          }
-          if (id === "1+") {
-            return productRAM <= 1;
-          }
-          return false;
-        });
-
-      productElement.style.display = matchesRAM ? "flex" : "none";
-    });
-
-    toggleClearAllRAMVisibility();
-  }
-
-  function clearAllRAMFilters() {
-    document.querySelectorAll(".sec6-input:checked").forEach((checkbox) => {
-      checkbox.checked = false;
-    });
-    toggleClearAllRAMVisibility();
-    filterByRAM();
-  }
-
-  function toggleClearAllRAMVisibility() {
-    const removeItemsSec6 = document.querySelector(".sec6-remove-items");
-    const checkboxes = document.querySelectorAll(".sec6-input:checked");
-    removeItemsSec6.style.display = checkboxes.length > 0 ? "block" : "none";
-  }
+  
 
   document.addEventListener("DOMContentLoaded", setupEventListeners);
-
   createHeader();
   createSubNav();
   createLeftSidebar();
