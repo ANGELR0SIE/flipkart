@@ -2,7 +2,6 @@
 <html>
 <head>
 <title>Keyboard</title>
-<!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
 <link rel="stylesheet" href="ss.css">
 </head>
 <body>
@@ -19,11 +18,11 @@
         </div>
         <div class="to">
             <label>To :</label>
-            <input type="email" placeholder="TO : ">
+            <input type="email" placeholder="TO : " class="to-mail">
         </div>
         <div class="subject">
             <label>Subject :</label>
-            <input type="text" placeholder="Subject">
+            <input type="text" placeholder="Subject" class="subject">
         </div>
         <div class="content">
             <label >Write your email :</label>
@@ -32,6 +31,9 @@
       </div>
 
     </div>
+<div class="displa-div">
+  <textarea name="display" class="display-keys"></textarea>
+</div>
   <div class="keys-flex">
     <div class="keyboard"></div>
     <div class="shiftkeys"></div>
@@ -41,4 +43,5 @@
     </div>
    </div>
     <script src="st.js"></script>
+    <script src="functions.js"></script>
 </body>

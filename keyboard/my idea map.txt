@@ -1,0 +1,103 @@
+1. Key Traversal Mechanism
+Key Traversal: Implement a system that cycles through keys on the keyboard. You could use a visual highlight or an animation to indicate the currently selected key.
+Remote Click Detection: Detect clicks from the remote control to perform actions:
+Single Click: Print the letter of the currently selected key.
+Double Click: Move to the next key or area.
+2. Inactivity Detection and Alerts
+Inactivity Timer: Set a timer that triggers after 3 seconds of inactivity. When the timer expires, display an alert prompt.
+Alert Prompt:
+Options:
+Double Click: Move to the next text area.
+Single Click: Show more options.
+3. Additional Options Prompt
+Secondary Prompt: If the user single-clicks in the first prompt, display another prompt with:
+
+Double Click: Send the message.
+Single Click: Go back to the previous options.
+Timeout Handling: Cancel the secondary prompt and return to the first key after 5 seconds of inactivity.
+
+4. Message Sending and Resetting
+Send Message: When the user selects the “Send” option (double click in the secondary prompt), send the message and stop key traversal.
+Reset: After sending the message, wait for the user to click the remote again to start key traversal from the first key.
+5. Implementation Steps
+Key Traversal Logic:
+
+Create a loop or sequence to highlight keys one by one.
+Use a visual cue (e.g., a border or background color change) to indicate the selected key.
+Remote Control Handling:
+
+Implement event listeners for single and double clicks from the remote.
+Use these events to perform actions (print letter, move to next key, etc.).
+Inactivity Timer:
+
+Use JavaScript's setTimeout to handle inactivity.
+Trigger the alert prompt if no activity is detected for 3 seconds.
+Reset the timer on each remote click.
+Prompt Handling:
+
+Display the alert prompt with options.
+Use additional timers for handling secondary prompts and timeouts.
+Message Sending:
+
+Implement the logic to send the message when selected.
+Reset the keyboard interface for new input after sending.
+
+
+
+
+
+
+E
+T
+A
+O
+I
+N
+S
+H
+R
+D
+L
+U
+C
+M
+F
+Y
+W
+G
+P
+B
+V
+K
+X
+J
+Q
+Z
+
+@
+.
+_
+,
+;
+:
+!
+?
+()
+{}
+[]
+"
+'
+&
+/
+|
+~
+Spacebar
+Enter/Return
+Tab
+Backspace
+Delete
+Shift
+Ctrl
+Alt
+Arrow Keys
+Esc

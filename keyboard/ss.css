@@ -15,11 +15,16 @@
     justify-content: center;
     background: #d6d6d6;
     font-family: font1;
+    
   }
   .row {
     width: 100%;
     /* height: 60px; */
     margin: 10px 0 0 0;
+  }
+ 
+  .keys-flex{
+    /* background: linear-gradient(135deg, #f6c6c6, #f8e5e5, #d3b2ff, #a8d5e2); */
   }
 
   .key{
@@ -29,8 +34,8 @@
     outline: none;
     border: none;
     /* box-shadow: 5px 5px 10px #474343, -1px -1px 10px #fff; */
-    /* box-shadow: 5px 5px 10px #8b8b8b, -5px -5px 10px #fff; */
-    border: 1px solid #474343 ;
+    box-shadow: 5px 5px 10px #8b8b8b, -5px -5px 10px #fff;
+    /* border: 1px solid #474343 ; */
     border-radius: 50px;
     font-size: 18px;
     color: #000;
@@ -38,6 +43,11 @@
     cursor: pointer;
   }
 
+  .key.highlight {
+   color: red;
+   box-shadow: 1px 1px 2px #fff8f8, -5px -5px 5px #474343;
+}
+  
   .keys-flex{
     display: flex;
     gap: 30px;
@@ -84,8 +94,6 @@
 .mail{
   background-color: #fff;
   margin-bottom: 50px;
-
-  /* box-shadow: 5px 5px 10px #474343, -1px -1px 10px #fff; */
   border: 1px solid #474343;
   border-radius: 30px;
   width: 50%;
@@ -165,4 +173,35 @@ textarea{
 }
 .remote-btn:active {
   box-shadow: 1px 1px 2px #fff8f8, -1px -1px 5px #474343;
+}
+
+
+.display-keys{
+  /* height: 500px;
+  width: 500px; */
+  font-size: 50px;
+/* width: 200px; */
+
+ text-align: center;
+  color: orangered;
+}
+
+.displa-div{
+  width: 500px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 50px;
+  background-color: #fff;
+}
+
+
+/* prompts---- */
+
+.custom-prompt{
+  position: absolute;
+  padding: 40px;
+  background-color: #efba27;
 }
