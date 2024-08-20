@@ -1,0 +1,53 @@
+<html>
+    <head><link rel="stylesheet" href="styles.css"></head>
+    <body>
+
+   <div class="main">
+    <div class="mail">
+        <div class="top">
+            <h1>Email</h1>
+        </div>
+      <div class="contens-flex">
+       
+        <div class="from">
+            <label>From :</label>
+            <input type="email" placeholder="From : " value="johnebraham@yahoo.com">
+        </div>
+        <div class="to">
+            <label>To :</label>
+            <input type="email" placeholder="TO : " class="to-mail">
+        </div>
+        <div class="subject">
+            <label>Subject :</label>
+            <input type="text" placeholder="Subject" class="subject">
+        </div>
+        <div class="content">
+            <label >Write your email :</label>
+            <textarea id="txtArea" rows="10" cols="80"></textarea>
+        </div>
+      </div>
+
+    </div>
+<div class="displa-div">
+  <textarea name="display" class="display-keys"></textarea>
+</div>
+  <div class="keys-flex">
+    <!-- <div class="keyboard"></div>
+    <div class="shiftkeys"></div> -->
+    <div class="binary-keyboard">
+        <div class="key" data-binary="0">0</div>
+        <div class="key" data-binary="1">1</div>
+        <div class="key action-key" id="send">Send</div>
+        <div class="key action-key" id="backspace">Backspace</div>
+        <div class="key action-key" id="next-line">Next Line</div>
+      </div>
+
+  </div>
+    <div class="remote">
+        <input type="button" class="remote-btn">
+    </div>
+   </div>
+          
+          <!-- <textarea class="output" rows="5" cols="30"></textarea> -->
+    <script src="script.js"></script>        
+    </body>

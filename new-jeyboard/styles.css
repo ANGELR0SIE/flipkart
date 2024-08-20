@@ -1,0 +1,76 @@
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #d6d6d6;
+    font-family: font1;
+    
+  }
+
+  .keyboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 700px;
+    /* background-color: #2b2b2b; */
+    padding: 20px;
+    border-radius: 15px;
+    /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); */
+}
+
+.keys-flex {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    width: 100%;
+}
+
+.key {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(145deg, #e6e6e6, #cfcfcf);
+    outline: none;
+    border: none;
+    box-shadow: 5px 5px 10px #8b8b8b, -5px -5px 10px #ffffff;
+    border-radius: 15px;
+    font-size: 18px;
+    color: #000;
+    margin: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.key:hover {
+    background: linear-gradient(145deg, #f0f0f0, #d8d8d8);
+    box-shadow: 3px 3px 8px #a1a1a1, -3px -3px 8px #ffffff;
+}
+
+.key.highlight {
+   color: red;
+   box-shadow: 1px 1px 2px #fff8f8, -5px -5px 5px #474343;
+}
+
+.key:active {
+    background-color: #bbb;
+}
+
+#space {
+    width: 240px;
+}
+
+#enter, #backspace, #shift, #style, #next-line, #send{
+    width: 120px;
+    height: 60px;
+}
+#gmail{
+    width: 200px;
+}
